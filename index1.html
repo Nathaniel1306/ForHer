@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PASSWORD</title>
+    </head>
+
+    <style>
+        body {
+            background-image: url("Untitled design.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: hidden;
+            background-attachment: fixed;
+            min-height: 100vh;
+            width: 90%;
+            height: 180px;
+        }
+        .glass {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 70px;
+            box-shadow: 0 4px 30px rgba(243, 47, 139, 0.5);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        #password {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 100px;
+            outline: none;
+            width: 80%;
+            margin-left: 5%;
+            margin-bottom: 20px;
+        }
+        #name {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 100px;
+            outline: none;
+            width: 80%;
+            margin-left: 5%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #submit {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 100px;
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-left: 40%;
+        }
+    </style>
+
+    <body>
+        <div class="glass">
+            <h1
+                style="
+                    font-family: Georgia, &quot;Times New Roman&quot;, serif;
+                    font-weight: bold;
+                    text-align: center;
+                    font-size: 2.5rem;
+                    color: #ff69b4;
+                    margin-top: 15px;
+                "
+            >
+                PASSWORD
+            </h1>
+
+            <form action="index2.html" method="post">
+                <input type="name" id="name" name="name" placeholder="Enter your name" required />
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password. You'll see it on your bag tag"
+                    required
+                />
+
+                <input type="submit" id="submit" value="Submit" />
+            </form>
+
+            <script>
+                const submitInput = document.querySelector("#submit");
+                submitInput.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const password = document.getElementById("password").value;
+
+                    if (password.toLowerCase() === "nath") {
+                        window.location.href = "index2.html";
+                    } else {
+                        alert("Incorrect password. Please try again.");
+                    }
+                });
+            </script>
+        </div>
+    </body>
+</html>

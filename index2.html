@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>For my Love</title>
+    </head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-attachment: fixed;
+            overflow: hidden;
+            background-image: url("paper.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3.5rem;
+            color: #ff69b4;
+            margin-top: 1rem;
+            -webkit-text-stroke: 1px #1773d0;
+        }
+        p {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #ff69b4;
+            margin-top: 1rem;
+            -webkit-text-stroke: 0.25px #0e0f10;
+        }
+        form {
+            font-size: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #862354;
+            margin-top: 1rem;
+            -webkit-text-stroke: 0.1px #0e0f10;
+        }
+        input[type="date"] {
+            padding: 0.5rem;
+            font-size: 1.25rem;
+            border: 1px solid #862354;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+        button[type="submit"] {
+            margin-top: 1.5rem;
+            padding: 0.5rem 1rem;
+            font-size: 1.25rem;
+            background-color: #ff69b4;
+            color: #e5ecf5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid #862354;
+        }
+        button {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition:
+                transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 2rem;
+            position: relative;
+        }
+    </style>
+
+    <body>
+        <img src="cat.gif" width="150" height="150" />
+
+        <h1>HAII MY LOVEEEE!!!</h1>
+        <p>I have question first to make sure you are my Babygirl</p>
+
+        <form id="date-form">
+            <label for="target-date">What date our anniversary is?</label>
+            <input type="date" id="target-date" min="2023-11-08" max="2023-11-08" required />
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            document.getElementById("date-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const date = document.getElementById("target-date").value;
+
+                if (date === "2023-11-08") {
+                    window.location.href = "index3.html";
+                } else {
+                    alert("HALAA!. HINDI MO ALAM?!?. HINDI MO NA AKO LAB😟️");
+                }
+            });
+        </script>
+    </body>
+</html>
